@@ -1,3 +1,6 @@
 %h1= @article.title
 %p= @article.content
 %p= "Written by #{@article.author} on #{@article.created_at.strftime("%Y-%m-%d")}"
+
+%br
+= link_to 'Back', root_path

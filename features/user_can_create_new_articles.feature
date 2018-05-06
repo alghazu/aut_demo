@@ -10,3 +10,5 @@ Scenario: User creates a new article
   And I fill in "Content" with "Hi this is a new article, it has some text"
   And I click on "Create Article"
   Then I should see "Your article was successfully created"
+  And I should see "A new Article"
+  And I should see "Hi this is a new article, it has some text"

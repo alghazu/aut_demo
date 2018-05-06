@@ -1,3 +1,6 @@
+%h1 Create new Article
+
+#article-form
 = form_with model: @article do |form|
   =form.label :title
   %br
@@ -13,3 +16,6 @@
   %br
   %br
   =form.submit
+
+%br
+= link_to 'Back', root_path
