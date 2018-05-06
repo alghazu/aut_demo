@@ -7,6 +7,6 @@ Scenario: User creates a new article
   Given I am on the landing page
   And I click on "Create Article"
   And I fill in "Title" with "A new Article"
-  And I fill in "Body" with "Hi this is a new article, it has some text"
-  And I click on "Publish"
+  And I fill in "Content" with "Hi this is a new article, it has some text"
+  And I click on "Save Article"
   Then I should see "Successfully published a new article"

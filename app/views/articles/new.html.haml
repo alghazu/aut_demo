@@ -1,0 +1,15 @@
+= form_with scope: :article do |form|
+  =form.label :title
+  %br
+  =form.text_field :title
+  %br
+  =form.label :content
+  %br
+  =form.text_area :content
+  %br
+  =form.label :author
+  %br
+  =form.text_field :author
+  %br
+  %br
+  =form.submit
