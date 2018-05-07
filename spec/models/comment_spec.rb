@@ -6,9 +6,5 @@ RSpec.describe Comment, type: :model do
     it {is_expected.to have_db_column :article_id}
     it {is_expected.to have_db_column :email}
   end
-  describe 'Factory' do
-    it 'has a valid' do
-      expect(FactoryBot.create(:comment)).to be_valid
-    end
-  end
+
 end

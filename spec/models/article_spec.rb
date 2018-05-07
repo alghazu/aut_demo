@@ -6,6 +6,7 @@ RSpec.describe Article, type: :model do
     it {is_expected.to have_db_column :content}
     it {is_expected.to have_db_column :author}
   end
+  
   describe 'Factory' do
     it 'has a valid' do
       expect(FactoryBot.create(:article)).to be_valid

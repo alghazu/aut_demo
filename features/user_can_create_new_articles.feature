@@ -8,6 +8,7 @@ Scenario: User creates a new article
   And I click on "Create Article"
   And I fill in "Title" with "A new Article"
   And I fill in "Content" with "Hi this is a new article, it has some text"
+  And I fill in "Author" with "Anders Jabar"
   And I click on "Create Article"
   Then I should see "Your article was successfully created"
   And I should see "A new Article"
