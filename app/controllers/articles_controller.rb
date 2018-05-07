@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
       flash[:success] = 'Your article was successfully created'
       redirect_to root_path
     else
-      flash[:error] = article.errors.full_messages.first
+      flash[:error] = article.errors.full_messages
       render :new
     end
   end

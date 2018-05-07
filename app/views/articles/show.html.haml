@@ -1,9 +1,28 @@
 %h1= @article.title
 %p= @article.content
 %p= "Written by #{@article.author} on #{@article.created_at.strftime("%Y-%m-%d")}"
+-if @article.comments.exists?
+  #comments
+    - @article.comments.each do |comment|
+      %p
+        = comment.content
+        %br
+        Commented by
+        = mail_to comment.email
 
-#comments
-  -
+#comments-form
+  = form_with scope: :comment , url: article_comments_path(@article) do |form|
+    %br
+    = form.label 'Comment'
+    %br
+    = form.text_area :content
+    %br
+    = form.label 'Email'
+    %br
+    = form.text_field :email
+    %br
+    = form.submit
+
 
 %br
 = link_to 'Back', root_path

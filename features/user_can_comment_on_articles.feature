@@ -12,8 +12,8 @@ Background:
 Scenario: Any visitor to the site can comment on messages and leave email
   Given I click on "A breaking news"
   Then I should see "Comment"
-  When I fill in "Comment" with "This is a cool article"
-  And I fill in "Email" with "someone@somesite.com"
+  When I fill in "comment_content" with "This is a cool article"
+  And I fill in "comment_email" with "someone@somesite.com"
   And I click on "Save Comment"
   Then I should see "Thanks for commenting"
   And I should see "This is a cool article"
